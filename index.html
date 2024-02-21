@@ -1,14 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Recommendation System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 50px;
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <p>HIII</p>
+  <h1>Welcome to Movie Recommendation System!</h1>
+  <form id="genre-form">
+    <label for="genres">Choose a genre from the following list:</label><br>
+    <select id="genres" name="genres">
+      <option value="Action">Action</option>
+      <option value="Adventure">Adventure</option>
+      <option value="Animation">Animation</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Crime">Crime</option>
+      <option value="Documentary">Documentary</option>
+      <option value="Drama">Drama</option>
+      <option value="Family">Family</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="History">History</option>
+      <option value="Horror">Horror</option>
+      <option value="Music">Music</option>
+      <option value="Mystery">Mystery</option>
+      <option value="Romance">Romance</option>
+      <option value="Science fiction">Science fiction</option>
+      <option value="Tv movie">Tv movie</option>
+      <option value="Thriller">Thriller</option>
+      <option value="War">War</option>
+      <option value="Western">Western</option>
+    </select><br>
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>
