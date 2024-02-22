@@ -1,3 +1,7 @@
+
+//bf63ca3e71b0f58f46a1b78516dab0f3
+// Add your JavaScript code here
+
 // Add your JavaScript code here
 
 document.getElementById('genre-form').addEventListener('submit', function(event) {
@@ -8,7 +12,7 @@ document.getElementById('genre-form').addEventListener('submit', function(event)
 });
 
 function fetchMoviesByGenre(genreId) {
-    const apiKey = 'bf63ca3e71b0f58f46a1b78516dab0f3';
+    const apiKey = 'bf63ca3e71b0f58f46a1b78516dab0f3'; // Replace with your actual TMDb API key
     const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&with_genres=${genreId}`;
 
     fetch(url)
@@ -29,6 +33,10 @@ function displayMovies(movies) {
 
         const movieTitle = document.createElement('div');
         movieTitle.textContent = `Movie Title: ${movie.title}`;
+
+        const moviePoster = document.createElement('img');
+        moviePoster.src = `https://image.tmdb.org/t/p/w154/${movie.poster_path}`;
+        moviePoster.alt = movie.title;
 
         const movieDropdown = document.createElement('button');
         movieDropdown.textContent = 'Show Details';
@@ -58,6 +66,7 @@ function displayMovies(movies) {
         });
 
         movieItem.appendChild(movieTitle);
+        movieItem.appendChild(moviePoster);
         movieItem.appendChild(movieDropdown);
         movieListContainer.appendChild(movieItem);
     });
