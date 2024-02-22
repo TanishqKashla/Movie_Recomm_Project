@@ -1,8 +1,4 @@
 
-//bf63ca3e71b0f58f46a1b78516dab0f3
-// Add your JavaScript code here
-
-// Add your JavaScript code here
 
 document.getElementById('genre-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
@@ -32,7 +28,7 @@ function displayMovies(movies) {
         movieItem.classList.add('movie-item');
 
         const movieTitle = document.createElement('div');
-        movieTitle.textContent = `Movie Title: ${movie.title}`;
+        movieTitle.textContent = `${movie.title}`;
 
         const moviePoster = document.createElement('img');
         moviePoster.src = `https://image.tmdb.org/t/p/w154/${movie.poster_path}`;
