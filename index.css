@@ -35,3 +35,34 @@
     text-decoration: none;
     cursor: pointer;
 }
+/* Add your CSS styles here */
+
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin : 2% 2% 2% 5%;
+}
+
+.movie-item {
+    width: calc(25% - 20px); /* 25% width for each item with a 20px gap */
+    margin-bottom: 50px;
+}
+
+.movie-item img {
+    width: 80%;
+    height: auto;
+}
+
+/* Add your CSS styles here */
+
+.movie-item {
+    margin-bottom: 20px;
+}
+
+
+
+.show-details-button {
+    display: block;
+    width: 80%; /* Optionally set the width to match the movie poster */
+}
