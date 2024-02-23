@@ -44,15 +44,15 @@ function displayMovies(movies) {
     movies.forEach(movie => {
         const movieItem = document.createElement('div');
         movieItem.classList.add('movie-item');
-        
-        // Display movie title
-        const movieTitle = document.createElement('div');
-        movieTitle.textContent = movie.title;
 
         // Display movie poster
         const moviePoster = document.createElement('img');
         moviePoster.src = `https://image.tmdb.org/t/p/w154/${movie.poster_path}`;
         moviePoster.alt = movie.title;
+
+        // Display movie title with release year
+        const movieTitle = document.createElement('div');
+        movieTitle.textContent = `${movie.title} (${getReleaseYear(movie.release_date)})`;
 
         // Display "Show Details" button
         const movieDropdown = document.createElement('button');
@@ -85,17 +85,17 @@ function displayMovies(movies) {
 
         // Append elements to movie item
         movieItem.appendChild(moviePoster);
-        movieItem.appendChild(movieTitle); // Add movie title
+        movieItem.appendChild(movieTitle); // Add movie title with release year
         movieItem.appendChild(movieDropdown);
         movieListContainer.appendChild(movieItem);
     });
 }
 
-
-// Helper function to get the release year from the release date
+// Helper function to get the release year from the full release date
 function getReleaseYear(releaseDate) {
     if (releaseDate) {
         return new Date(releaseDate).getFullYear();
     }
-    return '';
+    return 'N/A';
 }
+
